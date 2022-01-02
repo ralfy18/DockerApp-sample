@@ -3,12 +3,12 @@ services:
     php-apache-environment:
         container_name: php-apache
         build:
-            context: ./php
+            context: ./app
             dockerfile: Dockerfile
         depends_on:
             - db
         volumes:
-            - ./php/src:/var/www/html/
+            - ./:/var/www/html/
         ports:
             - 8000:80
     db:
@@ -17,8 +17,8 @@ services:
         restart: always
         environment:
             MYSQL_ROOT_PASSWORD: root
-            MYSQL_DATABASE: db_sia
+            MYSQL_DATABASE: db_act
             MYSQL_USER: admin
-            MYSQL_PASSWORD: admin_1234
+            MYSQL_PASSWORD: admin123
         ports:
             - "9906:3306"
