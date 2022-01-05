@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Warning":6,"App\\CrudTest::testInsert":4,"App\\crudTest::testInsert":4,"app\\crudTest::testInsert":4},"times":{"Warning":0.38,"App\\CrudTest::testInsert":0.004,"App\\crudTest::testInsert":0.003,"app\\crudTest::testInsert":0.004}}
