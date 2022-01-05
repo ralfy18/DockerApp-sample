@@ -1,11 +1,21 @@
-<?php
-$servername = "db";
-$username = "admin";
-$password = "admin123";
-$database = "db_act";
+<!DOCTYPE html>
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+
+<html>
+     <head>
+        <title>Update</title>
+        </head>
+<?php
+
+require ('config.php');
+
+// $servername = "db";
+// $username = "admin";
+// $password = "admin123";
+// $database = "db_act";
+
+// // Create connection
+// $conn = new mysqli($servername, $username, $password, $database);
 
 if(!$conn){
         die('error in sql' . mysqli_error($conn));
@@ -25,13 +35,7 @@ if(!$conn){
 
 
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-        <title>Edit User</title>
- </head>
-<body>
-        
+
         <form action="" method="POST">
                         <label >Name</label>
                         <input type="text"  name="name" value = "<?php echo $username; ?>"> <br></br>
@@ -41,24 +45,23 @@ if(!$conn){
                         <input type="text" name="address" value = "<?php echo $useraddress; ?>"> <br></br>
                         <button type="submit" name="update">Update</button>
                 </form>
-
         
 <?php
-if (isset($_POST['update'])){
+
+ if (isset($_POST['update'])){
         $name = $_POST['name'];
         $email = $_POST['email'];
         $address = $_POST['address'];
 
-        $qry = "UPDATE tbl_user SET user_name='$name', user_email='$email', 
-        user_address = '$address' WHERE user_id = $id";
+        $qry = "update tbl_user set user_name='$name', user_email='$email', 
+        user_address = '$address' where user_id = $id";
         if(mysqli_query($conn, $qry)){
-                header('location: index.php');
-        }else{
-                echo mysqli_error($conn);
+                header("Location: index.php");
+                
+               
+        
         }
  }
-
 ?>
 
-</body>
 </html>

@@ -2,6 +2,8 @@
 	// include('');
 	// require_once('');
 	require('config.php');
+	// require('crud.php');
+	// $Crud = new App\crud;
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,6 +18,11 @@
 			$un	=	mysqli_real_escape_string($conn,$_POST['user_name']);
 			$ue	=	mysqli_real_escape_string($conn,$_POST['user_email']);
 			$ua	=	mysqli_real_escape_string($conn,$_POST['user_address']);
+			
+			// inheritance
+			//$crud = new Crud
+			//$sql = $crud->insert($un,$ue,$ua);
+			
 			// Database Insert
 			
 			 $sql = mysqli_query($conn,"INSERT INTO tbl_user (`user_name`,`user_email`,`user_address`) VALUES ('".$un."','".$ue."','".$ua."')");
@@ -65,7 +72,7 @@ while ($row = mysqli_fetch_array($query)) {
 	<td><?php echo $row['user_email']?></td>
 	<td><?php echo $row['user_address']?></td>
     <td>
-	<a href ="edit.php?id=<?php echo $id; ?>">Edit</a>    |
+	<a href ="edit.php?id=<?php echo $id; ?>">Edit</a> |
 		<a href ="delete.php?id=<?php echo $id; ?>" onclick="return confirm('Are you sure?')">Delete</a>
 	</td>
 	</tr>
@@ -75,16 +82,6 @@ while ($row = mysqli_fetch_array($query)) {
 ?>
 
 </table>
-<!-- <?php
-$query = mysqli_query($conn, "DELETE FROM tbl_user WHERE user_id=47")
-   or die (mysqli_error($conn));
 
-   ?>
-   <FORM>
-   <button type="submit" name="query">DELETE USER</button>
-
-   </FORM> -->
-
-	
 </body>
 </html>
