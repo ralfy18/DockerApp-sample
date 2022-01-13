@@ -9,20 +9,20 @@
 
 require ('config.php');
 
-// $servername = "db";
-// $username = "admin";
-// $password = "admin123";
+//$servername = "db";
+//$username = "admin";
+ //$password = "admin123";
 // $database = "db_act";
 
-// // Create connection
-// $conn = new mysqli($servername, $username, $password, $database);
+//  Create connection
+ $conn = new mysqli($servername, $username, $password, $database);
 
 if(!$conn){
         die('error in sql' . mysqli_error($conn));
 
 }else{
-        $id = $_GET['id'];
-        $query = mysqli_query($conn, "SELECT * FROM tbl_user WHERE user_id = $id")
+       // $id = $_GET['id'];
+        $query = mysqli_query($conn, "SELECT * FROM tbl_user WHERE user_id")
         or die (mysqli_error($conn));
      
      while ($row = mysqli_fetch_array($query)) {

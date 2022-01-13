@@ -3,7 +3,7 @@
         colors="true"
         stopOnFailure="false">
     <testsuites>
-        <testsuite name="crud">
+        <testsuite name="Calculator">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

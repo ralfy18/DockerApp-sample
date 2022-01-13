@@ -20,9 +20,9 @@ require ('config.php');
 if(!$conn){
 	die('error in conn' . mysqli_error($conn));
 }
-$id = $_GET['id'];
+//$id = $_GET['id'];
 
-$qry = "DELETE FROM tbl_user WHERE user_id = $id";
+$qry = "DELETE FROM tbl_user WHERE user_id";
 if(mysqli_query($conn, $qry)){
 	//header('location: index.php');
 }

@@ -1,1 +1,1 @@
-{"version":1,"defects":{"crudTest::testInsert":4,"rudTest::testInsert":4},"times":{"crudTest::testInsert":0.005,"rudTest::testInsert":0.005}}
+{"version":1,"defects":{"crudTest::testInsert":4,"rudTest::testInsert":4,"CalculatorTest::testAdd":4,"CrudTest::testInsert":4,"WebTest::testInsert":3,"WebTest::testDelete":4,"WebTest::testEdit":5},"times":{"crudTest::testInsert":0.075,"rudTest::testInsert":0.005,"CalculatorTest::testAdd":0.006,"CrudTest::testInsert":0.005,"WebTest::testInsert":0.007,"WebTest::testDelete":0.03,"WebTest::testEdit":0.003}}

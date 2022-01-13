@@ -2,8 +2,8 @@
 	// include('');
 	// require_once('');
 	require('config.php');
-	// require('crud.php');
-	// $Crud = new App\crud;
+	// require('Web.php');
+	$web = new App\Web;
 ?>
 <!DOCTYPE html>
 <html>
